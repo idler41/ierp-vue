@@ -1,4 +1,3 @@
-
 const tokens = {
   admin: {
     token: 'admin-token'
@@ -10,10 +9,64 @@ const tokens = {
 
 const users = {
   'admin-token': {
-    roles: ['admin'],
-    introduction: 'I am a super administrator',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Super Admin'
+    avatar: '',
+    nickname: 'Super Admin',
+    resources: [
+      {
+        path: '/test',
+        key: 'test',
+        icon: '',
+        level: 1,
+        title: '测试页面'
+      },
+      {
+        path: '/sys-manager',
+        key: 'sys-manager',
+        icon: '',
+        title: '系统管理',
+        level: 1,
+        children: [
+          {
+            path: '/user',
+            key: 'user',
+            icon: '',
+            title: '用户管理',
+            level: 2
+          },
+          {
+            path: '/role',
+            key: 'role',
+            icon: '',
+            title: '角色管理',
+            level: 2
+          },
+          {
+            path: '',
+            key: 'test-level',
+            icon: '',
+            title: '测试层级',
+            level: 2,
+            children: [
+              {
+                path: '/test-level-1',
+                key: 'test-level-1',
+                icon: '',
+                title: '测试层级1',
+                level: 3
+              },
+              {
+                path: '/test-level-2',
+                key: 'test-level-2',
+                icon: '',
+                title: '测试层级2',
+                level: 3
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    permissions: []
   },
   'editor-token': {
     roles: ['editor'],
